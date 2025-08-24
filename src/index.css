@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  background: #f5f0f0;
+  color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 8px !important;
+  height: 8px !important;
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
+}
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+header .top-strip {}
+
+.link:hover {
+  color: #ff5252;
+}
+
+.MuiBadge-badge {
+  background-color: #ff5252 !important;
+}
+
+nav ul button {
+  text-transform: capitalize !important;
+
+}
+
+.sliderHome {
+  overflow: inherit !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 22px !important;
+  color: black;
+}
+.smlBtn .swiper-button-prev,
+.smlBtn .swiper-button-next{
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px;
+  top: 55% !important;
+} 
+.smlBtn .swiper-button-prev:after,
+.smlBtn .swiper-button-next:after{
+ font-size: 18px !important;
+  color: black;
+}
+.homecatslider{
+  overflow: inherit !important;
+}
+.homecatslider .item{
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.homecatslider .swiper-button-prev,.homecatslider .swiper-button-next{
+width: 30px;
+min-width: 30px;
+height: 30px;
+}
+.homecatslider .swiper-button-prev::after,.homecatslider .swiper-button-next::after{
+  font-size: 16px !important;
+}
+.homecatslider .swiper-button-prev{
+  left: 4px !important;
+}
+.homecatslider .swiper-button-next{
+  right: 4px !important;
+}
+.homecatslider .swiper-button-prev:hover,.homecatslider .swiper-button-next:hover{
+  background: #ff5252 !important;
+}
+.homecatslider .swiper-button-prev:hover::after,.homecatslider .swiper-button-next:hover::after{
+  color: #f5f0f0 !important;
+}
+.homecatslider .item:hover img{
+  transform: scale(1.1);
+}
+.custom-slide img {
+position: relative;
+  height: 180px;
+  /* border-radius: 15px;
+   transition: transform 0.3s ease; */
+   /* padding: 5px; */
+
+}
+.custom-slide span{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.custom-slide img:hover {
+  transform: scale(1.1); 
+
+    
+}
+.MuiTabs-indicator{
+  background-color: #ff5252 !important;
+}
+.MuiTab-textColorPrimary.Mui-selected{
+  color: #ff5252 !important;
+}
+.productSlider .swiper-wrapper{
+padding: 15px;
+margin-left: -15px;
+margin-right: -15px;
+}
