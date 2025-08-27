@@ -1,71 +1,36 @@
-import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-// import { FaRegPlusSquare } from "react-icons/fa";
-import { IoCloseSharp } from "react-icons/io5";
-// import { Link } from 'react-router-dom';
-// import { FaRegSquareMinus } from "react-icons/fa6";
-// import { useState } from 'react';
-import './style.css'
-import CategoryCollapse from '../../CategoryCollapse';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { FaRegSquareMinus } from "react-icons/fa6"
+import { FaRegPlusSquare } from "react-icons/fa";
 
+const CategoryCollapse = () => {
+      const [submenuIndex, setSubmenuIndex] = useState(null)
+        const [innerSubmenuIndex, setinnerSubmenuIndex] = useState(null)
+            // const [innerOuterwearIndex, setinnerOuterwearIndex] = useState(null)
+        
+      const openSubmenu = (index) => {
 
-const CategoryPanel = (props) => {
-    // const [submenuIndex, setSubmenuIndex] = useState(null)
-    // const [innerSubmenuIndex, setinnerSubmenuIndex] = useState(null)
-    // const [innerOuterwearIndex, setinnerOuterwearIndex] = useState(null)
-    const [innerFootwearIndex, setinnerFootwearIndex] = useState(null)
-    const [OuterwearIndex, setOuterwearIndex] = useState(null)
-    const toggleDrawer = (newOpen) => () => {
-        props.setisOpenCatPanel(newOpen)
-    }
-    // const openSubmenu = (index) => {
-    //     // console.log(submenuIndex, '--', index);
+        if (submenuIndex === index) {
+            setSubmenuIndex(null)
 
-    //     if (submenuIndex === index) {
-    //         setSubmenuIndex(null)
-
-    //     } else {
-    //         setSubmenuIndex(index)
-
-    //     }
-    // }
-    // const openinnerSubmenu = (index) => {
-    //     if (innerSubmenuIndex === index) {
-    //         setinnerSubmenuIndex(null)
-
-    //     } else {
-    //         setinnerSubmenuIndex(index)
-
-    //     }
-    // }
-    const openinnerOuterwear = (index) => {
-        if (innerOuterwearIndex === index) {
-            setinnerOuterwearIndex(null)
         } else {
-            setinnerOuterwearIndex(index)
+            setSubmenuIndex(index)
+
         }
     }
-    const openinnerFootwear = (index) => {
-        if (innerFootwearIndex === index) {
-            setinnerFootwearIndex(null)
+    const openinnerSubmenu = (index) => {
+        if (innerSubmenuIndex === index) {
+            setinnerSubmenuIndex(null)
+
         } else {
-            setinnerFootwearIndex(index)
+            setinnerSubmenuIndex(index)
+
         }
     }
-    const openOuterwear = (index) => {
-        if (OuterwearIndex === index) {
-            setOuterwearIndex(null)
-        } else {
-            setOuterwearIndex(index)
-        }
-    }
-    const DrawerList = (
-        <Box sx={{ width: 250 }} role="presentation" className="categoryPanel ">
-            <h3 className='p-3 text-[16px] font-[500] flex items-center justify-between '>Shop By Categories <IoCloseSharp onClick={toggleDrawer(false)} className='cursor-pointer text-[20px]' /></h3>
-{/* 
-            <div className="scroll ">
+  return (
+    <>
+         <div className="scroll ">
                 <ul className='w-full '>
                     <li className='list-none flex items-center relative flex-col '>
                         <Link to="/" className='w-full '>
@@ -125,8 +90,8 @@ const CategoryPanel = (props) => {
                                 </ul>
                             )
                         }
-
-                        {
+                        {/* Outerwear */}
+                        {/* {
                             submenuIndex === 0 && (
                                 <ul className="submenu w-full pl-3">
                                     <li className='list-none relative'>
@@ -171,9 +136,9 @@ const CategoryPanel = (props) => {
                                     </li>
                                 </ul>
                             )
-                        }
-
-                        {
+                        } */}
+                        {/* Footwear */}
+                        {/* {
                             submenuIndex === 0 && (
                                 <ul className="submenu w-full pl-3">
                                     <li className='list-none relative'>
@@ -218,21 +183,24 @@ const CategoryPanel = (props) => {
                                     </li>
                                 </ul>
                             )
-                        }
+                        } */}
                     </li>
-                    <li className='list-none relative'>
+                    {/* Jewellery */}
+                    {/* <li className='list-none relative'>
                         <Link to="/" className='w-full'>
                             <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.8)] '>
                                 Jewellery</Button>
                         </Link>
-                    </li>
-                    <li className='list-none relative'>
+                    </li> */}
+                    {/* Watches */}
+                    {/* <li className='list-none relative'>
                         <Link to="/" className='w-full '>
                             <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.8)] '>
                                 Watches</Button>
                         </Link>
-                    </li>
-                    <li className='list-none flex items-center relative flex-col'>
+                    </li> */}
+                    {/* Outerwear */}
+                    {/* <li className='list-none flex items-center relative flex-col'>
                         <Link to="/" className='w-full'>
                             <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.8)]'>Outerwear</Button></Link>
                         {
@@ -248,7 +216,7 @@ const CategoryPanel = (props) => {
                             OuterwearIndex === 1 && (
                                 <ul className="submenu w-full pl-3">
                                     <li className='list-none relative'>
-                                        
+                                       
 
 
                                         {
@@ -277,14 +245,14 @@ const CategoryPanel = (props) => {
                                 </ul>
                             )
                         }
-                    </li>
-                    <li className='list-none relative'>
+                    </li> */}
+                    {/* <li className='list-none relative'>
                         <Link to="/" className='w-full'>
                             <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.8)] '>
                                 Cosmetics</Button>
                         </Link>
-                    </li>
-                    <li className='list-none relative'>
+                    </li> */}
+                    {/* <li className='list-none relative'>
                         <Link to="/" className='w-full'>
                             <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.8)] '>
                                 Accessories</Button>
@@ -343,65 +311,11 @@ const CategoryPanel = (props) => {
                             <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.8)] '>
                                 Sunglasses</Button>
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
-            </div> */}
-            <CategoryCollapse/>
-
-        </Box>
-    );
-    return (
-        <>
-
-            <Drawer open={props.isOpenCatPanel} onClose={toggleDrawer(false)}>
-                {DrawerList}
-            </Drawer>
-        </>
-    )
+            </div>
+    </>
+  )
 }
 
-export default CategoryPanel
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default CategoryCollapse

@@ -14,6 +14,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import BlogItem from '../../Components/BlogItem';
+import HomeBannerV2 from '../../Components/HomeSliderV2';
+import BannerBoxV2 from '../../Components/bannerBoxV2';
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -24,6 +26,19 @@ const Home = () => {
   return (
     <div>
       <Slider />
+
+      <section className='py-6'>
+        <div className="container flex  gap-5">
+           <div className="part1 w-[70%]">
+            <HomeBannerV2/>
+           </div>
+ <div className="part2 w-[30%]  flex items-center gap-5 justify-between flex-col">
+<BannerBoxV2 info="left" image={"img/sub-banner-1.jpg"}/>
+<BannerBoxV2 info="right" image={"img/sub-banner-2.jpg"} />
+ </div>
+
+        </div>
+      </section>
       <Catslider />
       <div className='bg-white py-8'>
         <div className='container'>
@@ -106,7 +121,7 @@ const Home = () => {
 
   <Swiper
           slidesPerView={4}
-          spaceBetween={10}
+          spaceBetween={30}
           navigation={true}
           modules={[Navigation]}
           className="blogSlider"
@@ -114,11 +129,28 @@ const Home = () => {
           <SwiperSlide>
             <BlogItem/>
           </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <BlogItem/>
+          </SwiperSlide>
           </Swiper>
       </div>
       </section>
 
-      <br /><br /><br /><br /><br /><br /><br />
+      
+
     </div>
 
   )

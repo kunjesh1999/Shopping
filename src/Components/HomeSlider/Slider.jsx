@@ -7,7 +7,11 @@ const Slider = () => {
   return (
     <div className='homeSlider py-4'>
       <div className="container">
-        <Swiper   spaceBetween={10} navigation={true} modules={[Navigation,Autoplay]} 
+        <Swiper
+         loop={true}
+           spaceBetween={10} 
+           navigation={true} 
+           modules={[Navigation,Autoplay]} 
          autoplay={{
           delay: 2500,
           disableOnInteraction: false,
