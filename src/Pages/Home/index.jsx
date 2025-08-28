@@ -16,6 +16,7 @@ import 'swiper/css/navigation';
 import BlogItem from '../../Components/BlogItem';
 import HomeBannerV2 from '../../Components/HomeSliderV2';
 import BannerBoxV2 from '../../Components/bannerBoxV2';
+import BannerBoxVV2 from '../../Components/BannerBoxVV2';
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -90,8 +91,8 @@ const Home = () => {
           </div>
 
 
-          <BannerSlider items={4} />
-
+          {/* <BannerSlider items={4} /> */}
+            <BannerBoxVV2 items={4}/>
 
         </div>
       </section>
