@@ -2,44 +2,44 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-// import { FaRegPlusSquare } from "react-icons/fa";
+import { FaRegPlusSquare } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-// import { Link } from 'react-router-dom';
-// import { FaRegSquareMinus } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import { FaRegSquareMinus } from "react-icons/fa6";
 // import { useState } from 'react';
 import './style.css'
-import CategoryCollapse from '../../CategoryCollapse';
+// import CategoryCollapse from '../../CategoryCollapse';
 
 
 const CategoryPanel = (props) => {
-    // const [submenuIndex, setSubmenuIndex] = useState(null)
-    // const [innerSubmenuIndex, setinnerSubmenuIndex] = useState(null)
-    // const [innerOuterwearIndex, setinnerOuterwearIndex] = useState(null)
+    const [submenuIndex, setSubmenuIndex] = useState(null)
+    const [innerSubmenuIndex, setinnerSubmenuIndex] = useState(null)
+    const [innerOuterwearIndex, setinnerOuterwearIndex] = useState(null)
     const [innerFootwearIndex, setinnerFootwearIndex] = useState(null)
     const [OuterwearIndex, setOuterwearIndex] = useState(null)
     const toggleDrawer = (newOpen) => () => {
         props.setisOpenCatPanel(newOpen)
     }
-    // const openSubmenu = (index) => {
-    //     // console.log(submenuIndex, '--', index);
+    const openSubmenu = (index) => {
+        // console.log(submenuIndex, '--', index);
 
-    //     if (submenuIndex === index) {
-    //         setSubmenuIndex(null)
+        if (submenuIndex === index) {
+            setSubmenuIndex(null)
 
-    //     } else {
-    //         setSubmenuIndex(index)
+        } else {
+            setSubmenuIndex(index)
 
-    //     }
-    // }
-    // const openinnerSubmenu = (index) => {
-    //     if (innerSubmenuIndex === index) {
-    //         setinnerSubmenuIndex(null)
+        }
+    }
+    const openinnerSubmenu = (index) => {
+        if (innerSubmenuIndex === index) {
+            setinnerSubmenuIndex(null)
 
-    //     } else {
-    //         setinnerSubmenuIndex(index)
+        } else {
+            setinnerSubmenuIndex(index)
 
-    //     }
-    // }
+        }
+    }
     const openinnerOuterwear = (index) => {
         if (innerOuterwearIndex === index) {
             setinnerOuterwearIndex(null)
@@ -64,7 +64,7 @@ const CategoryPanel = (props) => {
     const DrawerList = (
         <Box sx={{ width: 250 }} role="presentation" className="categoryPanel ">
             <h3 className='p-3 text-[16px] font-[500] flex items-center justify-between '>Shop By Categories <IoCloseSharp onClick={toggleDrawer(false)} className='cursor-pointer text-[20px]' /></h3>
-{/* 
+
             <div className="scroll ">
                 <ul className='w-full '>
                     <li className='list-none flex items-center relative flex-col '>
@@ -293,7 +293,7 @@ const CategoryPanel = (props) => {
                     <li className='list-none relative'>
                         <Link to="/" className='w-full'>
                             <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.8)] '>
-                                Electronic</Button>
+                                Electronics</Button>
                         </Link>
                     </li>
                     <li className='list-none relative'>
@@ -345,8 +345,8 @@ const CategoryPanel = (props) => {
                         </Link>
                     </li>
                 </ul>
-            </div> */}
-            <CategoryCollapse/>
+            </div>
+            {/* <CategoryCollapse/> */}
 
         </Box>
     );

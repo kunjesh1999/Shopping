@@ -132,12 +132,12 @@ function Footer() {
                     <li className='list-none'><Link to="/" target='_blank' className='w-[35px] h-[35px] rounded-full border border-[rgba(0,0,0,0.1)] flex items-center justify-center group hover:bg-primary transition-all '><FaInstagram className='text-[15px]  group-hover:text-white'/></Link></li>
                    </ul>
                    <p className='text-[13px] text-center mb-0'>© 2024 - Ecommerce Template</p>
-                   <div className="flex items-center">
+                   <div className="flex items-center gap-3">
                     <img src="\img\carte_bleue.png" alt="" />
                     <img src="\img\visa.png" alt="" />
-                    <img src="\img\master_card.svg" alt="" />
+                    {/* <img src="\img\master_card.svg" alt="" /> */}
                     <img src="\img\american_express.png" alt="" />
-                    <img src="\img\paypal.svg" alt="" />
+                    <img src="\img\paypal.png" alt="" />
                    </div>
             </div>
         </div>

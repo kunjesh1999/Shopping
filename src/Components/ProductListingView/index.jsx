@@ -2,14 +2,19 @@ import React from 'react'
 import "../ProductItem/Style.css"
 import { Link } from 'react-router-dom'
 import Rating from '@mui/material/Rating';
+import "../ProductItem/Style.css"
+
 import { Button } from '@mui/material';
 import { FaRegHeart } from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
 import { MdZoomOutMap } from "react-icons/md";
+import { MdOutlineShoppingCart } from "react-icons/md";
+
+
 const ProductItem = () => {
     return (
-        <div className='productItem rounded-md shadow-lg overflow-hidden border-1 border-[rgba(0,0,0,0.1)]'>
-            <div className='group imgWrapper w-[100%] h-[auto] overflow-hidden rounded-md relative'>
+        <div className='productItem rounded-md shadow-lg overflow-hidden border-1 border-[rgba(0,0,0,0.1)] flex items-center'>
+            <div className='group imgWrapper w-[25%] h-[auto] overflow-hidden rounded-md relative'>
             <Link to="">
             <div className='img h-[220px] overflow-hidden'>
 
@@ -32,13 +37,17 @@ const ProductItem = () => {
                 </div>
                 
             </div>
-            <div className='info p-3 py-4'>
-                <h6 className='text-[13px]'><Link to="/" className='link transition-all'>CLAFOUTIS</Link></h6>
-                <h3 className='text-[13px] title mt-1 font-[500] text-[#000] mb-1'><Link to="/" className='link transition-all'>Men Opaque Casual Shirt...</Link></h3>
+            <div className='info p-3 px-8 py-4 w-[75%] '>
+                <h6 className='text-[15px]'><Link to="/" className='link transition-all'>CLAFOUTIS</Link></h6>
+                <h3 className='text-[18px] title mt-3 font-[500] text-[#000] mb-3'><Link to="/" className='link transition-all'>Men Opaque Casual Shirt...</Link></h3>
+                <p className='text-[14px] mb-3'>This premium quality half-sleeve shirt is a stylish and comfortable choice for your wardrobe. With soft fabric and modern design, it is a perfect fit for both daily wear and special occasions. </p>
                 <Rating name="size-small" defaultValue={4} size="small" readOnly />
                 <div className='flex items-center gap-4'>
                     <span className='oldPrice line-through text-gray-500 text-[15px] font-[500]'>$58.00</span>
                     <span className='price text-primary font-[600] text-[15px]'>$58.00</span>
+                </div>
+                 <div className='mt-3'>
+                <Button className='btn-org flex gap-2'><MdOutlineShoppingCart className='text-[20px]'/>Add to Cart</Button>
                 </div>
             </div>
 
