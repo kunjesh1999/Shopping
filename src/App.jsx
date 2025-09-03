@@ -5,6 +5,7 @@ import Header from './Components/Header'
 import Home from './Pages/Home'
 import ProductListing from './Pages/productListing'
 import Footer from './Components/Footer'
+import ProductDetails from './Pages/ProductDetails'
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
      <Header/>
    <Routes>
     <Route path={'/'} exact={true} element={<Home/>}/>
-    <Route path={'/ProductListing'} exact={true} element={<ProductListing/>}/>
+    <Route path={"/ProductListing"} exact={true} element={<ProductListing/>}/>
+    <Route path={"/Product/:id"} exact={true} element={<ProductDetails/>}/>
    </Routes>
    <Footer/>
    </BrowserRouter>

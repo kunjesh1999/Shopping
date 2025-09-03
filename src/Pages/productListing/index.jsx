@@ -87,7 +87,7 @@ const ProductListing = () => {
 
                             </div>
                         </div>
-                        <div className={`grid ${itemView==='grid' ? 'grid-cols-4 md:grid-cols-4' : 'grid-cols-1 md:grid-cols-1'} gap-4`}>
+                        <div className={`grid ${itemView === 'grid' ? 'grid-cols-4 md:grid-cols-4' : 'grid-cols-1 md:grid-cols-1'} gap-4`}>
                             {
                                 itemView === 'grid' ?
                                     <>
@@ -100,23 +100,23 @@ const ProductListing = () => {
                                         <ProductItem />
                                         <ProductItem />
                                     </>
-                                        :
-                                        <>
-                                            <ProductListingView/>
-                                            <ProductListingView/>
-                                            <ProductListingView/>
-                                            <ProductListingView/>
-                                            <ProductListingView/>
-                                            <ProductListingView/>
-                                            <ProductListingView/>
-                                            <ProductListingView/>
-                                        </>
-                   }
+                                    :
+                                    <>
+                                        <ProductListingView />
+                                        <ProductListingView />
+                                        <ProductListingView />
+                                        <ProductListingView />
+                                        <ProductListingView />
+                                        <ProductListingView />
+                                        <ProductListingView />
+                                        <ProductListingView />
+                                    </>
+                            }
 
                         </div>
-<div className="flex items-center justify-center mt-10">
- <Pagination count={10} showFirstButton showLastButton />
-</div>
+                        <div className="flex items-center justify-center mt-10">
+                            <Pagination count={10} showFirstButton showLastButton />
+                        </div>
                     </div>
 
                 </div>
