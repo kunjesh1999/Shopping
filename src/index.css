@@ -12,8 +12,12 @@ body {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   background: #f5f0f0;
-  color: rgba(0, 0, 0, 0.9);
+  color: #3e3e3e;
   overflow-x: hidden;
+}
+p{
+  font-size: 14px;
+  line-height: 25px;
 }
 .btn-org{
   background-color: #ff5252 !important;
@@ -229,8 +233,9 @@ opacity: 1;
   color: #fff !important;
 }
 
-.zoomProductsSliderThumbs .swiper-slide{
-  height: auto !important;
+.zoomProductsSliderThumbs .swiper-wrapper{
+  /* height: 100px !important; */
+  padding-top: 38px;
 }
 .zoomProductsSliderThumbs .swiper-button-next{
   bottom: 0px !important;
@@ -252,4 +257,17 @@ opacity: 1;
 }
 .zoomProductsSliderThumbs .swiper-button-prev::after{
   transform: rotate(90deg);
+}
+.productContent .actions button{
+min-width: 40px !important;
+border: 1px solid rgba(0,0,0,0.1) !important;
+height: 30px;
+color:rgba(0,0,0,0.7)
+}
+
+Input [type-nunher]::-webkit-inner-spin-button,
+Input [type-nuber]::-webkit-outer-spin-button{
+-webkit-appearances :none;
+-moz-appearances: none;
+appearance: none;
 }

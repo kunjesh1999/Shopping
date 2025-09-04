@@ -132,15 +132,15 @@ const ProductZoom = () => {
           <Swiper
             ref={zoomSliderSml}
             direction={'vertical'}
-            slidesPerView={4}
-            spaceBetween={10}
+            slidesPerView={5}
+            spaceBetween={70}
             navigation={true}
             modules={[Navigation]}
             className="zoomProductsSliderThumbs h-[500px] overflow-hidden"
           >
             <SwiperSlide>
               <div
-                className="item rounded-md overflow-hidden cursor-pointer group"
+                className={`item rounded-md overflow-hidden cursor-pointer group ${slideIndex === 0?'opacity-1':'opacity-30'}`}
                 onClick={() => goto(0)}
               >
                 <img
@@ -152,7 +152,7 @@ const ProductZoom = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className="item rounded-md overflow-hidden cursor-pointer group"
+                className={`item rounded-md overflow-hidden cursor-pointer group ${slideIndex === 1 ?'opacity-1':'opacity-30'}`}
                 onClick={() => goto(1)}
               >
                 <img
@@ -164,7 +164,7 @@ const ProductZoom = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className="item rounded-md overflow-hidden cursor-pointer group"
+                className={`item rounded-md overflow-hidden cursor-pointer group ${slideIndex === 2 ?'opacity-1':'opacity-30'}`}
                 onClick={() => goto(2)}
               >
                 <img
@@ -176,7 +176,7 @@ const ProductZoom = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className="item rounded-md overflow-hidden cursor-pointer group"
+                className={`item rounded-md overflow-hidden cursor-pointer group ${slideIndex === 3 ?'opacity-1':'opacity-30'}`}
                 onClick={() => goto(3)}
               >
                 <img
@@ -188,16 +188,18 @@ const ProductZoom = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div
-                className="item rounded-md overflow-hidden cursor-pointer group"
-                onClick={() => goto(3)}
+                className={`item rounded-md overflow-hidden cursor-pointer group ${slideIndex === 4 ?'opacity-1':'opacity-30'}`}
+                onClick={() => goto(4)}
               >
                 <img
-                  src="/img/pic-2.4.webp"
+                  src="/img/pic-2.1.webp"
                   alt=""
                   className="w-full transition-all group-hover:scale-105"
                 />
               </div>
             </SwiperSlide>
+
+          <SwiperSlide></SwiperSlide>
           </Swiper>
         </div>
 
