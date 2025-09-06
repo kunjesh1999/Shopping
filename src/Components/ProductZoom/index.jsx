@@ -136,7 +136,7 @@ const ProductZoom = () => {
             spaceBetween={70}
             navigation={true}
             modules={[Navigation]}
-            className="zoomProductsSliderThumbs h-[500px] overflow-hidden"
+            className="zoomProductsSliderThumbs h-[500px] overflow-hidden "
           >
             <SwiperSlide>
               <div
@@ -204,7 +204,7 @@ const ProductZoom = () => {
         </div>
 
         {/* Right Big Zoom Slider */}
-        <div className="zoomContainer w-[85%] h-[500px] overflow-hidden">
+        <div className="zoomContainer w-[85%] h-[500px] overflow-hidden rounded-md">
           <Swiper ref={zoomSliderBig} slidesPerView={1} spaceBetween={0} navigation={false}>
             <SwiperSlide>
               <InnerImageZoom src="/img/pic-2.1.webp" zoomSrc="/img/pic-2.1.webp" />

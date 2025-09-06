@@ -33,7 +33,7 @@ const ProductItem = () => {
                 
             </div>
             <div className='info p-3 py-4'>
-                <h6 className='text-[13px]'><Link to="/" className='link transition-all'>CLAFOUTIS</Link></h6>
+                <h6 className='text-[13px] !font-[400]'><Link to="/" className='link transition-all'>CLAFOUTIS</Link></h6>
                 <h3 className='text-[13px] title mt-1 font-[500] text-[#000] mb-1'><Link to="/" className='link transition-all'>Men Opaque Casual Shirt...</Link></h3>
                 <Rating name="size-small" defaultValue={4} size="small" readOnly />
                 <div className='flex items-center gap-4'>
