@@ -79,7 +79,7 @@ const Home = () => {
       <section className='py-4 pt-2 bg-white '>
         <div className="container">
           <div className="freeShipping w-[80%] m-auto py-4 p-4 border-2 border-[#ff5252] flex items-center justify-between rounded-md">
-            <div className="col1 flex items-center gap-4">
+            <div className="col1 flex items-center gap-4 ">
               <LiaShippingFastSolid className='text-[50px]' />
               <span className='text-[20px] font-[600] uppercase'>Free Shipping {" "}</span>
             </div>

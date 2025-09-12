@@ -5,13 +5,10 @@ import { Link } from 'react-router-dom';
 import ProductZoom from '../../Components/ProductZoom';
 import Rating from '@mui/material/Rating';
 import { Button } from '@mui/material';
-import QtyBox from '../../Components/QtyBox';
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
-import { IoIosGitCompare } from "react-icons/io";
 
+import TextField from '@mui/material/TextField';
+import ProductDetailsComponents from '../../Components/ProductDetails';
 const ProductDetails = () => {
-    const [productActionIndex, setProductActionIndex] = useState(null)
     const [activeTab, setActiveTab] = useState(0)
     return (
         <>
@@ -49,8 +46,8 @@ const ProductDetails = () => {
                         <ProductZoom />
                     </div>
 
-                    <div className="productContent w-[60%] pr-10">
-                        <h1 className='text-[24px] font-[600] mb-2'>Embroidered Satin Saree</h1>
+                    <div className="productContent w-[60%] pr-10 pl-10">
+                        {/* <h1 className='text-[24px] font-[600] mb-2'>Embroidered Satin Saree</h1>
                         <div className="flex items-center gap-3">
                             <span className='text-gray-400 text-[13px]'>Brands: <span className='font-[500] text-black opacity-75'>House of Chikankari</span></span>
                             <Rating name="size-small" defaultValue={4} size="small" readOnly />
@@ -74,18 +71,19 @@ const ProductDetails = () => {
                             </div>
                         </div>
 
-                        <p className='text-[14px] mt-4 mb-2'>Free Shipping (Est. Delivery Time 2-3 Days)</p>
-                        <div className="flex items-center  gap-4">
+                        <p className='text-[14px] mt-5 mb-2 text-[#000]'>Free Shipping (Est. Delivery Time 2-3 Days)</p>
+                        <div className="flex items-center gap-4 py-4">
                             <div className="qtyBoxWrapper w-[70px]">
 
                                 <QtyBox />
                             </div>
                             <Button className='btn-org flex gap-2'><MdOutlineShoppingCart className='text-[22px]' />Add to Cart</Button>
                         </div>
-                        <div className="flex items-center gap-4 mt-6">
+                        <div className="flex items-center gap-4 mt-4">
                             <span className='flex items-center gap-2 text-[15px] link cursor-pointer font-[500]'><FaRegHeart className='text-[18px]' />Add to Wishlist</span>
                             <span className='flex items-center gap-2 text-[15px] link cursor-pointer font-[500]'><IoIosGitCompare className='text-[18px]' />Add to Compare</span>
-                        </div>
+                        </div> */}
+                        <ProductDetailsComponents/>
 
 
                     </div>
@@ -208,29 +206,115 @@ const ProductDetails = () => {
                         <div className="shadow-md w-[80%] py-5 px-8 rounded-md">
                             <div className="w-full productReviewsContainer">
                                 <h2 className='text-[18px]'>Customer question & answer</h2>
-                                <div className="scroll w-full max-h-[300px] overflow-y-scroll overflow-x-hidden mt-4">
-                                <div className="review w-full flex items-center justify-between">
-                                 <div className="info w-[60%] flex items-center gap-3">
-                                     <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
-                                        <img src="\img\Customer pic-1.webp" alt="" className='w-full h-full object-cover'/>
-                                     </div>
-                                     <div className="w-[80%]">
-                                        <h4 className='text-[16px]'>Rinku Verma</h4>
-                                        <h5 className='text-[13px] mb-0'>2024-12-01</h5>
-                                        <p className='mb-0 mt-0'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                     </div>
+                                <div className="reviewScroll w-full max-h-[300px] overflow-y-scroll overflow-x-hidden mt-5 pr-5">
+                                    <div className="review pt-5 pb-5 border-b border-[rgba(0,0,0,0.1)]  w-full flex items-center justify-between">
+                                        <div className="info w-[60%] flex items-center gap-3">
+                                            <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                                                <img src="\img\Customer pic-1.webp" alt="" className='w-full h-full object-cover' />
+                                            </div>
+                                            <div className="w-[80%]">
+                                                <h4 className='text-[16px]'>Rinku Verma</h4>
+                                                <h5 className='text-[13px] mb-0'>2024-12-01</h5>
+                                                <p className='mb-0 mt-0'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            </div>
 
-                                 </div>
-                                                                 <Rating name="size-small" defaultValue={4}  readOnly />
+                                        </div>
+                                        <Rating name="size-small" defaultValue={4} readOnly />
+
+                                    </div>
+                                    <div className="review pt-5 pb-5 border-b border-[rgba(0,0,0,0.1)]  w-full flex items-center justify-between">
+                                        <div className="info w-[60%] flex items-center gap-3">
+                                            <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                                                <img src="\img\Customer pic-1.webp" alt="" className='w-full h-full object-cover' />
+                                            </div>
+                                            <div className="w-[80%]">
+                                                <h4 className='text-[16px]'>Rinku Verma</h4>
+                                                <h5 className='text-[13px] mb-0'>2024-12-01</h5>
+                                                <p className='mb-0 mt-0'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            </div>
+
+                                        </div>
+                                        <Rating name="size-small" defaultValue={4} readOnly />
+
+                                    </div>
+                                    <div className="review pt-5 pb-5 border-b border-[rgba(0,0,0,0.1)]  w-full flex items-center justify-between">
+                                        <div className="info w-[60%] flex items-center gap-3">
+                                            <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                                                <img src="\img\Customer pic-1.webp" alt="" className='w-full h-full object-cover' />
+                                            </div>
+                                            <div className="w-[80%]">
+                                                <h4 className='text-[16px]'>Rinku Verma</h4>
+                                                <h5 className='text-[13px] mb-0'>2024-12-01</h5>
+                                                <p className='mb-0 mt-0'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            </div>
+
+                                        </div>
+                                        <Rating name="size-small" defaultValue={4} readOnly />
+
+                                    </div>
+                                    <div className="review pt-5 pb-5 border-b border-[rgba(0,0,0,0.1)]  w-full flex items-center justify-between">
+                                        <div className="info w-[60%] flex items-center gap-3">
+                                            <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                                                <img src="\img\Customer pic-1.webp" alt="" className='w-full h-full object-cover' />
+                                            </div>
+                                            <div className="w-[80%]">
+                                                <h4 className='text-[16px]'>Rinku Verma</h4>
+                                                <h5 className='text-[13px] mb-0'>2024-12-01</h5>
+                                                <p className='mb-0 mt-0'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            </div>
+
+                                        </div>
+                                        <Rating name="size-small" defaultValue={4} readOnly />
+
+                                    </div>
+                                    <div className="review pt-5 pb-5 border-b border-[rgba(0,0,0,0.1)]  w-full flex items-center justify-between">
+                                        <div className="info w-[60%] flex items-center gap-3">
+                                            <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                                                <img src="\img\Customer pic-1.webp" alt="" className='w-full h-full object-cover' />
+                                            </div>
+                                            <div className="w-[80%]">
+                                                <h4 className='text-[16px]'>Rinku Verma</h4>
+                                                <h5 className='text-[13px] mb-0'>2024-12-01</h5>
+                                                <p className='mb-0 mt-0'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                            </div>
+
+                                        </div>
+                                        <Rating name="size-small" defaultValue={4} readOnly />
+
+                                    </div>
 
                                 </div>
 
+                                <br />
+                                <div className="revivewForm bg-[#fafafa] p-4 rounded-md">
+                                    <h2 className='text-[18px]'>Add a review</h2>
+                                    <form className='w-full mt-5'>
+                                        <TextField
+                                            id="outlined-multiline-flexible"
+                                            label="Write a review"
+                                            multiline
+                                            rows={5}
+                                            className='w-full'
+                                        />
+                                        <br /><br />
+                                        <Rating name="size-small" defaultValue={4} size="small" />
+                                        <div className="flex items-center mt-5">
+                                            <Button className='btn-org'>Submit Review</Button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     }
+
+
+                </div>
+                <div className="container pt-8">
+                    <h2 className='text-[20px] font-[600] pb-0'>Related Products</h2>
+                    {/* <ProductSlider items={6} /> */}
                 </div>
             </section>
+
         </>
     )
 }
