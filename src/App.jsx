@@ -18,20 +18,18 @@ import ProductDetailsComponents from './Components/ProductDetails'
 
 const MyContext = createContext();
 function App() {
-  const [openProductDetailsModal, setOpenProductDetailsModal] = useState(true);
+  const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
   const [maxWidth, setMaxWidth] = React.useState('lg');
   const [fullWidth, setFullWidth] = React.useState(true);
 
-  const handleClickOpenopenProductDetailsModal = () => {
-    setOpenProductDetailsModal(true);
-  };
+
 
   const handleCloseopenProductDetailsModal = () => {
     setOpenProductDetailsModal(false);
   };
 
   const values = {
-
+setOpenProductDetailsModal
   }
   return (
     <>
@@ -58,11 +56,11 @@ function App() {
 
         <DialogContent>
           <div className="flex items-center w-full productDetailsModalContainer relative">
-            <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] !absolute top-[0px] right-[0px]' onClick={handleCloseopenProductDetailsModal}><IoClose /></Button>
-            <div className="col1 w-[40%]">
+            <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] !absolute top-[15px] right-[15px] !bg-[#f1f1f1]' onClick={handleCloseopenProductDetailsModal}><IoClose className='text-[20px]'/></Button>
+            <div className="col1 w-[40%] px-3">
               <ProductZoom />
             </div>
-            <div className="col2 w-[60%] py-8 px-8 productContent">
+            <div className="col2 w-[60%] py-8 px-8 pr-16 productContent">
            <ProductDetailsComponents/>
             </div>
           </div>
@@ -74,3 +72,4 @@ function App() {
 }
 
 export default App
+export {MyContext}

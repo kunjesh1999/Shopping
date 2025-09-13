@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../ProductItem/Style.css"
 import { Link } from 'react-router-dom'
 import Rating from '@mui/material/Rating';
@@ -6,11 +6,13 @@ import { Button } from '@mui/material';
 import { FaRegHeart } from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
 import { MdZoomOutMap } from "react-icons/md";
+import { MyContext } from '../../App';
 const ProductItem = () => {
+    const contex= useContext(MyContext)
     return (
         <div className='productItem rounded-md shadow-lg overflow-hidden border-1 border-[rgba(0,0,0,0.1)]'>
             <div className='group imgWrapper w-[100%] h-[auto] overflow-hidden rounded-md relative'>
-            <Link to="">
+            <Link to="/product/84758">
             <div className='img h-[220px] overflow-hidden'>
 
                 <img src='img\pic-1.svg' className='w-full ' />
@@ -24,7 +26,7 @@ const ProductItem = () => {
                 
                 <span className='discount flex items-center absolute top-[10px] left-[10px] z-50 !bg-primary text-white rounded-lg p-1 text-[12px] font-[500]'>10%</span>
                 <div className='actions absolute top-[-200px] right-[5px] z-50 flex items-center gap-2 flex-col w-[50px] transition-all duration-300 group-hover:top-[15px] opacity-0 group-hover:opacity-100'>
-                    <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group'><MdZoomOutMap className='text-[18px] !text-black group-hover:text-white hover:text-white' /></Button>
+                    <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group' onClick={()=>contex.setOpenProductDetailsModal(true)}><MdZoomOutMap className='text-[18px] !text-black group-hover:text-white hover:text-white' /></Button>
                    
                                         <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group'><IoIosGitCompare className='text-[18px] !text-black group-hover:text-white hover:text-white'  /></Button>
                     <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group'><FaRegHeart className='text-[18px] !text-black group-hover:text-white hover:text-white'  /></Button>
