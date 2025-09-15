@@ -15,6 +15,7 @@ import DialogContent from '@mui/material/DialogContent';
 import ProductZoom from './Components/ProductZoom'
 import { IoClose } from "react-icons/io5";
 import ProductDetailsComponents from './Components/ProductDetails'
+import Login from './Pages/Login'
 
 const MyContext = createContext();
 function App() {
@@ -40,6 +41,7 @@ setOpenProductDetailsModal
             <Route path={'/'} exact={true} element={<Home />} />
             <Route path={"/ProductListing"} exact={true} element={<ProductListing />} />
             <Route path={"/Product/:id"} exact={true} element={<ProductDetails />} />
+            <Route path={"/login"} exact={true} element={<Login />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
