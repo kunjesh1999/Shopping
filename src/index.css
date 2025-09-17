@@ -34,6 +34,10 @@ font-weight: 600;
 .btn-org:hover{
 background-color: #171717 !important;
 }
+.btn-lg{
+   font-size: 18px;
+  padding: 10px 20px !important;
+}
 
 ::-webkit-scrollbar{
   width: 8px !important;
@@ -286,3 +290,10 @@ background: #ccc !important;
 /* .productDetailsModal .MuiDialogContent-root{
 padding: 0px !important;
 } */
+.cartPanel .MuiPaper-root{
+width: 400px;
+overflow: hidden;
+}
+#size-menu .MuiButtonBase-root{
+ font-size: 12px !important;
+}

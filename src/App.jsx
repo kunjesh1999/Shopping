@@ -16,21 +16,44 @@ import ProductZoom from './Components/ProductZoom'
 import { IoClose } from "react-icons/io5";
 import ProductDetailsComponents from './Components/ProductDetails'
 import Login from './Pages/Login'
+import Register from './Pages/Register'
+import CartPage from './Pages/Cart'
+import Verify from './Pages/Verify'
+
+// import Drawer from '@mui/material/Drawer';
+// import CartPanel from './Components/CartPanel'
+import toast, { Toaster } from 'react-hot-toast';
 
 const MyContext = createContext();
 function App() {
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
-  const [maxWidth, setMaxWidth] = React.useState('lg');
-  const [fullWidth, setFullWidth] = React.useState(true);
+  const [maxWidth, setMaxWidth] = useState('lg');
+  const [fullWidth, setFullWidth] = useState(true);
 
+  const [openCartPanel, setOpenCartPanel] = useState(false);
+  const toggleCartPanel = (newOpen) => () => {
+    setOpenCartPanel(newOpen);
+  };
 
 
   const handleCloseopenProductDetailsModal = () => {
     setOpenProductDetailsModal(false);
   };
-
+  const openAlertBox = (status,msg) => {
+    if(status==="success"){
+    toast.success(msg)
+    }
+    if(status==="error"){
+    toast.error(msg)
+    }
+    // toast(status);
+  }
   const values = {
-setOpenProductDetailsModal
+    setOpenProductDetailsModal,
+    setOpenCartPanel,
+    toggleCartPanel,
+    openCartPanel,
+    openAlertBox
   }
   return (
     <>
@@ -42,10 +65,16 @@ setOpenProductDetailsModal
             <Route path={"/ProductListing"} exact={true} element={<ProductListing />} />
             <Route path={"/Product/:id"} exact={true} element={<ProductDetails />} />
             <Route path={"/login"} exact={true} element={<Login />} />
+            <Route path={"/register"} exact={true} element={<Register />} />
+            <Route path={"/cart"} exact={true} element={<CartPage />} />
+            <Route path={"/verify"} exact={true} element={<Verify />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
       </BrowserRouter>
+
+      <Toaster />
+
       <Dialog
         fullWidth={fullWidth}
         maxWidth={maxWidth}
@@ -58,20 +87,31 @@ setOpenProductDetailsModal
 
         <DialogContent>
           <div className="flex items-center w-full productDetailsModalContainer relative">
-            <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] !absolute top-[15px] right-[15px] !bg-[#f1f1f1]' onClick={handleCloseopenProductDetailsModal}><IoClose className='text-[20px]'/></Button>
+            <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] !absolute top-[15px] right-[15px] !bg-[#f1f1f1]' onClick={handleCloseopenProductDetailsModal}><IoClose className='text-[20px]' /></Button>
             <div className="col1 w-[40%] px-3">
               <ProductZoom />
             </div>
             <div className="col2 w-[60%] py-8 px-8 pr-16 productContent">
-           <ProductDetailsComponents/>
+              <ProductDetailsComponents />
             </div>
           </div>
         </DialogContent>
 
       </Dialog>
+
+      {/* { cart Panel} */}
+      {/* <Drawer open={openCartPanel} onClose={toggleCartPanel(false)} anchor={"right"} className='cartPanel '>
+        <div className="flex items-center justify-between py-3 px-4 gap-3 border-b border-[rgba(0,0,0,0.1)] overflow-hidden" >
+          <h4>Shopping Cart 1 </h4>
+          <IoClose className='text-[20px] cursor-pointer' onClick={toggleCartPanel(false)} />
+        </div>
+        <CartPanel />
+
+      </Drawer> */}
+
     </>
   )
 }
 
 export default App
-export {MyContext}
+export { MyContext }
