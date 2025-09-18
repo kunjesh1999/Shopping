@@ -34,10 +34,10 @@ const Login = () => {
           <h3 className='text-center text-[18px] text-black'>Login  to your account</h3>
           <form className='w-full mt-5'>
             <div className='form-group w-full mb-5'>
-              <TextField type="email" name="name"id="email" label="Email Id *" variant="outlined" className='w-full' />
+              <TextField type="email" name="name" id="email" label="Email Id *" variant="outlined" className='w-full' />
             </div>
             <div className='form-group w-full mb-5 relative'>
-              <TextField name="password"type={ isShowPassword===false ? 'password' : 'text'} id="password" label="Password *" variant="outlined" className='w-full' />
+              <TextField name="password" type={ isShowPassword===false ? 'password' : 'text'} id="password" label="Password *" variant="outlined" className='w-full' />
               <Button  className='!absolute top-[10px] right-[10px] z-50 !w-[35px] !h-[35px] !min-w-[35px] !rounded-full !text-black' onClick={() => setIsShowPassword(!isShowPassword)}>
               {
                 isShowPassword===false ? <IoMdEye className='text-[20px] opacity-75' />:<IoEyeOffSharp className='text-[20px] opacity-75' />

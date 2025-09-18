@@ -23,6 +23,8 @@ import Verify from './Pages/Verify'
 // import Drawer from '@mui/material/Drawer';
 // import CartPanel from './Components/CartPanel'
 import toast, { Toaster } from 'react-hot-toast';
+import ForgotPassword from './Pages/ForgotPassword'
+import Checkout from './Pages/Checkout'
 
 const MyContext = createContext();
 function App() {
@@ -46,7 +48,7 @@ function App() {
     if(status==="error"){
     toast.error(msg)
     }
-    // toast(status);
+    
   }
   const values = {
     setOpenProductDetailsModal,
@@ -68,6 +70,8 @@ function App() {
             <Route path={"/register"} exact={true} element={<Register />} />
             <Route path={"/cart"} exact={true} element={<CartPage />} />
             <Route path={"/verify"} exact={true} element={<Verify />} />
+            <Route path={"/forgot-password"} exact={true} element={<ForgotPassword />} />
+            <Route path={"/checkout"} exact={true} element={<Checkout />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
