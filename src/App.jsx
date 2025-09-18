@@ -31,6 +31,7 @@ function App() {
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
   const [maxWidth, setMaxWidth] = useState('lg');
   const [fullWidth, setFullWidth] = useState(true);
+  const [isLogin,setIsLogin]= useState(true)
 
   const [openCartPanel, setOpenCartPanel] = useState(false);
   const toggleCartPanel = (newOpen) => () => {
@@ -55,7 +56,9 @@ function App() {
     setOpenCartPanel,
     toggleCartPanel,
     openCartPanel,
-    openAlertBox
+    openAlertBox,
+    isLogin,
+    setIsLogin
   }
   return (
     <>

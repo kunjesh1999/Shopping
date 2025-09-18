@@ -314,3 +314,6 @@ overflow: hidden;
   height: 90vh;
   display: flex;
 }
+#account-menu .MuiPaper-root{
+width: 200px;
+}
