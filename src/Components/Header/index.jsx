@@ -137,19 +137,21 @@ const Header = () => {
                                                     <FaRegUser className='text-[18px]' /> <span className='text-[14px]'>My Account</span>
                                                 </MenuItem>
                                             </Link>
-                                            <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
-                                                <BsBagCheck className='text-[18px]' />  <span className='text-[14px]'>Orders</span>
-                                            </MenuItem>
-                                            <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
-                                                <IoMdHeartEmpty className='text-[18px]' />  <span className='text-[14px]'>My List</span>
-                                            </MenuItem>
-                                            <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
-                                                <IoIosLogOut className='text-[18px]' />  <span className='text-[14px]'>Logout
-                                                </span>                                            </MenuItem>
-
-
-
-                                        </Menu>
+                                            <Link to="/my-Orders" className='w-full block'>
+                                                <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
+                                                    <BsBagCheck className='text-[18px]' />  <span className='text-[14px]'>Orders</span>
+                                                </MenuItem>
+                                            </Link>
+                                            <Link to="/my-list" className='w-full block'>
+                                                <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
+                                                    <IoMdHeartEmpty className='text-[18px]' />  <span className='text-[14px]'>My List</span>
+                                                </MenuItem>
+                                            </Link>
+                                                <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
+                                                    <IoIosLogOut className='text-[18px]' />  <span className='text-[14px]'>Logout
+                                                    </span>
+                                                </MenuItem>
+                                           </Menu>
                                     </>
                                 )}
                             <li>
